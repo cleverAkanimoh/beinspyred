@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="clever Akanimoh" />
+	<meta name="description" content="photographer for hire, hire a good photographer. Best in service delivery" />
+	<title>beinspyred VISUALS</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon.ico" />
+	<link rel="manifest" href="favicon_io/site.webmanifest" />
+	<style>
+		@keyframes bgImgChange {
+			0% {
+				background: linear-gradient(rgba(63, 208, 212, 0.2),
+						rgba(0, 0, 0, 0.8)),
+					url(images/hero_bcg.jpg) center/cover no-repeat;
+			}
+
+			50% {
+				background: linear-gradient(rgba(63, 208, 212, 0.2),
+						rgba(0, 0, 0, 0.8)),
+					url(images/hero_bcg2.jpg) center/cover no-repeat;
+			}
+
+			100% {
+				background: linear-gradient(rgba(63, 208, 212, 0.2),
+						rgba(0, 0, 0, 0.8)),
+					url(images/hero_bcg3.jpg) center/cover no-repeat;
+			}
+		}
+
+		#welcome {
+			min-height: 100vh;
+			padding: 0 1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			background: url(images/hero.svg) center/cover no-repeat;
+		}
+
+		main {
+			display: none;
+			/* display: block; */
+		}
+
+		header {
+			position: relative;
+			height: 100vh;
+			animation: bgImgChange 30s ease-out infinite;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<!-- Welcome area -->
+
+	<div id="welcome">
+		<h2>welcome to beinspyred visuals</h2>
+		<img src="images/lady_with_camera.svg" alt="welcome image" />
+		<h3>please wait...</h3>
+		<div class="loading"></div>
+	</div>
+
+	<main>
+		<header>
+			<!-- navbar -->
+			<nav class="nav">
+				<div class="nav-center">
+					<div class="nav-header">
+						<img src="images/logo.png" class="nav-logo" alt="" />
+						<button class="btn about-btn">about us</button>
+						<!-- <button class="btn toggle-btn">
+							<i class="fas fa-bars"></i>
+						</button> -->
+					</div>
+					<!-- <ul class="nav-links">
+						<li>
+							<button class="link-btn">services</button>
+						</li>
+						<li>
+							<button class="link-btn">blog</button>
+						</li>
+						<li>
+							<button class="link-btn">company</button>
+						</li>
+					</ul> -->
+					<button class="btn contact-btn">contact us</button>
+				</div>
+			</nav>
+
+			<div id="mainBody">
+				<!-- hero  -->
+				<section class="hero">
+					<div class="hero-center">
+						<article class="hero-info">
+							<h1>
+								<em>Beinspyred</em> <i class="fas fa-camera"></i> <br> your moments with style
+							</h1>
+							<p>
+								Millions of customers from all works of life,
+								trust beinspyred to help share in their
+								memories. From studio shots to outdoor imagery,
+								beinspyred creates the best out of beautiful
+								moments.
+							</p>
+							<div id="btnContainer">
+								<button class="btn contact-btn contact-sm">
+									connect with Us
+								</button>
+							</div>
+						</article>
+						<!-- <article class="hero-images">
+							<img src="images/phone.svg" class="phone-img" alt="" />
+						</article> -->
+					</div>
+				</section>
+
+				<!-- modal for about -->
+
+				<section class="aboutModalOverlay">
+					<div class="aboutModalContainer">
+						<h3>modal content</h3>
+						<button class="close-btn">&times;</button>
+					</div>
+				</section>
+
+				<!-- modal for submenu-->
+				<!-- <div class="sidebar-wrapper">
+					<aside class="sidebar">
+						<div class="sidebar-links"></div> -->
+
+				<!-- links -->
+				<!-- </aside>
+				</div> -->
+
+				<!-- links -->
+				<!-- <aside class="submenu"></aside> -->
+
+				<!-- modal for contact-->
+				<div class="contactWrapper">
+					<aside class="contactMenu">
+						<h2>contact us on</h2>
+						<ul class="contactLinks">
+							<li>
+								<a href="https://#" target="_blank"><i class="fa fa-facebook"></i> facebook</a>
+							</li>
+							<li>
+								<a href="https://#" target="_blank"><i class="fa fa-whatsapp"></i> whatsapp</a>
+							</li>
+							<li>
+								<a href="https://#" target="_blank"><i class="fa fa-twitter"></i> twitter</a>
+							</li>
+							<li>
+								<a href="https://#" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
+							</li>
+						</ul>
+					</aside>
+				</div>
+		</header>
+
+		<!-- gallery -->
+
+		<section class="gallery">
+			<div class="galleryFirstDiv">
+				<h2>Our collection</h2>
+				<div class="imagesContainer imagesEnvelop">
+					<!-- <picture>
+						<img class="galleryImage" src="images/image_temp1.jpg" alt="this is the description for this image. It was gotten through target.attrName">
+					</picture> -->
+				</div>
+			</div>
+		</section>
+
+		<!-- galleryModal -->
+
+		<aside class="galleryWrapper">
+		</aside>
+
+		<!-- posts -->
+
+		<!-- <section id="postContainer">
+			<article id="postInfo">
+				<h1>blog post</h1>
+				<p>some blog post will appear here</p>
+			</article>
+		</section> -->
+
+		<!-- numbers -->
+
+		<section class="numbers">
+			<!-- single number -->
+			<article>
+				<span class="number" data-value="500"></span>
+				<p>Succeeded Projects</p>
+			</article class="workingHours">
+			<!-- end of single number -->
+			<!-- single number -->
+			<article id="workingHours">
+				<span class="number" data-value="17140"></span>
+				<p>Working Hours Spent</p>
+			</article>
+			<!-- end of single number -->
+			<!-- single number -->
+			<article>
+				<span class="number" data-value="1500"></span>
+				<p>Happy Clients</p>
+			</article>
+			<!-- end of single number -->
+		</section>
+
+		<section class="otherImg">
+			<article>
+				<h2>More from Beinspyred</h2>
+				<div>
+					<img src="images/more_img1.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img2.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img3.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img4.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img5.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img6.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img7.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img8.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img9.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img10.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img11.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img12.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img13.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img14.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img15.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img16.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img17.jpg" alt="images for more from beinspyredd studios">
+					<img src="images/more_img18.jpg" alt="images for more from beinspyredd studios">
+				</div>
+			</article>
+		</section>
+
+		
+
+		<footer>
+			<p>
+				<a href="tel:09076514500"><i class="fa-solid fa-phone"></i>call to book</a>
+			</p>
+
+			<li class="email">
+				<a href="mailto:"><i class="fa-solid fa-envelope"></i> support@beinspyred.com</a>
+			</li>
+
+			<ul class="socialList">
+				<li>
+					<a href="https://#" target="_blank"><i class="fa fa-facebook"></i></a>
+				</li>
+				<li>
+					<a href="https://#" target="_blank"><i class="fa fa-whatsapp"></i></a>
+				</li>
+				<li>
+					<a href="https://#" target="_blank"><i class="fa fa-twitter"></i></a>
+				</li>
+				<li>
+					<a href="https://#" target="_blank"><i class="fa fa-linkedin"></i></a>
+				</li>
+			</ul>
+			<address>locate us at No 407 Nwaniba Road</address>
+			<div id="logoDateContainer">
+				<img src="images/logo.png" id="footerLogo" class="nav-logo" alt="" />
+				<div id="date"></div>
+			</div>
+			<div id="webBuilder">
+				<samp>made cleverly</samp>
+			</div>
+		</footer>
+		</div>
+	</main>
+
+	<script src="https://kit.fontawesome.com/013e95e6af.js" crossorigin="anonymous"></script>
+	<script type="module" src="js/app.js"></script>
+</body>
+
+</html>
