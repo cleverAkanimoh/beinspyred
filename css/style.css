@@ -172,7 +172,7 @@ welcome page
 .loading {
 	width: 4rem;
 	height: 4rem;
-	border: 8px dotted transparent;
+	border: 8px solid transparent;
 	border-radius: 50%;
 	border-top-color: var(--clr-primary-3);
 	animation: spinner 0.65s linear infinite;
@@ -318,7 +318,7 @@ button.link-btn {
 
 .btn.about-btn {
 	background: transparent;
-	color: var(--clr-primary-5);
+	color: white;
 	font-weight: bold;
 }
 
@@ -338,14 +338,12 @@ button.link-btn {
 	display: grid;
 	place-items: center;
 	transition: var(--transition);
-	z-index: -5;
+	z-index: 5;
 	visibility: hidden;
 }
 
 .open-modal {
-	z-index: 5;
 	visibility: visible;
-  
 }
 
 .open-modal .aboutModalContainer {
@@ -362,7 +360,7 @@ translate: 0 0%;
 	display: grid;
 	place-items: center;
 	position: relative;
-	translate: 0 -100%;
+	translate: 0 -105%;
 	transition: var(--transition);
 }
 
@@ -393,12 +391,11 @@ translate: 0 0%;
 	display: grid;
 	place-items: center;
 	transition: var(--transition);
-	z-index: -5;
+	z-index: 5;
 	visibility: hidden;
 }
 
 .contactWrapper.show {
-	z-index: 5;
 	visibility: visible;
 }
 
@@ -414,10 +411,30 @@ translate: 0 0%;
 	border-radius: var(--radius);
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	padding: 4rem 0;
-	place-items: center;
-	translate: 0 -100%;
+	translate: 0 -115%;
 	transition: var(--transition);
+}
+
+.contactWrapper .contactMenu::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 10vh;
+	height: 10vh;
+	background: linear-gradient(45deg, rgba(73, 166, 233, 0.8), rgba(73, 166, 233, 0.4));
+	border-radius: 2rem 0.166rem 0.6rem;
+}
+
+.contactWrapper .contactMenu ul {
+	font-size: large;
+	padding: 2rem ;
+}
+
+.contactWrapper .contactMenu ul a:hover {
+	text-decoration: underline;
 }
 
 /* gallery */
@@ -965,5 +982,17 @@ footer div#webBuilder {
 	.galleryWrapper .galleryModal img {
 		height: 43vh;
 		width: 45vw;
+	}
+	footer {
+		display:flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10rem 15rem;
+	}
+
+	footer ul.socialList {
+		bottom: 3.5vw;
+		right: 1.5vw;
 	}
 }
