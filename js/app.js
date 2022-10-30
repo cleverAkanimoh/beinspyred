@@ -31,10 +31,12 @@ logos.forEach(logo => {
 
 // load page
 
-window.onload = () => {
+const loadPage = () => {
   welcome.style.display = 'none';
   main.style.display = 'block';
 }
+
+window.addEventListener('DOMContentLoaded', loadPage);
 
 // open / close about page
 
