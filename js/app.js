@@ -68,7 +68,7 @@ window.onscroll = () => {
   const scrollHeight = window.pageYOffset;
   const navHeight = navbar.getBoundingClientRect().height;
   const heroHeight = hero.getBoundingClientRect().height;
-
+  setInterval(moveImages, 1000);
   if (scrollHeight > navHeight) {
     navbar.classList.add('fixed-nav');
   } else {
