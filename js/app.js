@@ -1,5 +1,3 @@
-// import sublinks from './moduleFiles/data.js';
-
 import galleryImages from './moduleFiles/imageGallery.js';
 
 import { welcome, main, navbar, hero, beinspyredText, logos, contactBtn, contactWrapper, date, items, imagesEnvelop, galleryWrapper } from './moduleFiles/declarations.js';
@@ -10,10 +8,10 @@ let move = 1;
 
 const moveImages = () => {
   scrollImages.forEach((img) => {
-    img.style.cssText = `translate: -${move++}px`;
     if (move === 10000) {
       move = 1;
     }
+    img.style.cssText = `translate: -${move++}px`;
   })
 }
 
