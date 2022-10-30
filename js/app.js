@@ -123,72 +123,6 @@ const complete = () => {
 
 let timer = setInterval(ontick, 200)
 
-// hide/show sidebar
-
-// toggleBtn.addEventListener('click', () => {
-//   sidebarWrapper.classList.add('show');
-// });
-// sidebarWrapper.addEventListener('click', () => {
-//   sidebarWrapper.classList.remove('show');
-// });
-
-// set sidebar
-// sidebar.innerHTML = sublinks.map((item) => {
-//   const { links, page } = item;
-//   return `<article >
-// <h4>${page}</h4>
-// <div class="sidebar-sublinks">
-// ${links.map((link) => {
-//     return `<a href="${link.url} title="${link.desc}"><i class="${link.icon}"></i>${link.label}</a>`;
-//   }).join('')}
-// </div>
-// </article>`;
-// }).join('');
-
-// linkBtns.forEach((btn) => {
-//   btn.addEventListener('mouseover', function (e) {
-//     const text = e.currentTarget.textContent;
-//     const tempBtn = e.currentTarget.getBoundingClientRect();
-//     const center = (tempBtn.left + tempBtn.right) / 2;
-//     const bottom = tempBtn.bottom - 3;
-
-//     const tempPage = sublinks.find((link) => link.page === text);
-//     if (tempPage) {
-//       const { page, links } = tempPage;
-//       submenu.classList.add('show');
-//       submenu.style.left = `${center}px`;
-//       submenu.style.top = `${bottom}px`;
-//       // OPTIONAL
-//       let columns = 'col-2';
-//       if (links.length === 3) {
-//         columns = 'col-3';
-//       }
-//       if (links.length > 3) {
-//         columns = 'col-4';
-//       }
-//       submenu.innerHTML = `
-//       <section> 
-//       <h4>${page}</h4>
-//       <div class="submenu-center ${columns}">
-//       ${links.map((link) => {
-//         return `<a href="${link.url}" title="${link.desc}"><i class="${link.icon}"></i>${link.label}</a>`;
-//       }).join('')}
-//       </div>
-//       </section>
-//       `;
-//     }
-//   });
-// });
-
-// hero.addEventListener('mouseover', function (e) {
-//   submenu.classList.remove('show');
-// });
-// navbar.addEventListener('mouseover', function (e) {
-//   if (!e.target.classList.contains('link-btn')) {
-//     submenu.classList.remove('show');
-//   }
-// });
-
 // numbers
 
 const updateCount = (el) => {
@@ -213,23 +147,6 @@ const updateCount = (el) => {
 items.forEach((item) => {
   updateCount(item);
 });
-
-// post api area
-
-// const postInfo = document.querySelector('#postInfo');
-
-const apiKey = 'AIzaSyANUrcJTHxucJe-_D_3cmy1aBGOEzFmXu8';
-
-const url = `https://www.googleapis.com/blogger/v3/blogs/2399953?key=${apiKey}`;
-
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-    return data;
-    
-  })
-  .catch(err => console.log('An error occured, failed to load blog post.'));
 
 // photoGallery
 
