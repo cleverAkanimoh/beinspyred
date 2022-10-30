@@ -15,9 +15,6 @@ const moveImages = () => {
   })
 }
 
-// let movingForward =
-setInterval(moveImages, 1000)
-
 // setting year
 date.innerText = new Date().getFullYear();
 
@@ -31,12 +28,10 @@ logos.forEach(logo => {
 
 // load page
 
-const loadPage = () => {
+window.onload = () => {
   welcome.style.display = 'none';
   main.style.display = 'block';
 }
-
-window.addEventListener('DOMContentLoaded', loadPage);
 
 // open / close about page
 
