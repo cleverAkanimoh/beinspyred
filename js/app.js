@@ -1,5 +1,3 @@
-import galleryImages from './moduleFiles/imageGallery.js';
-
 import { welcome, main, navbar, hero, beinspyredText, logos, contactBtn, contactWrapper, date, items, imagesEnvelop, galleryWrapper } from './moduleFiles/declarations.js';
 
 const scrollImages = document.querySelectorAll('.otherImg article div img');
@@ -8,12 +6,15 @@ let move = 1;
 
 const moveImages = () => {
   scrollImages.forEach((img) => {
+    img.style.cssText = `translate: -${move++}px`;
     if (move === 10000) {
       move = 1;
     }
-    img.style.cssText = `translate: -${move++}px`;
   })
 }
+
+// let movingForward =
+setInterval(moveImages, 1000)
 
 // setting year
 date.innerText = new Date().getFullYear();
@@ -62,13 +63,11 @@ contactWrapper.onclick = () => {
 
 // fixed nav
 
-const navHeaderLogo = document.querySelector('.nav-header')
-
 window.onscroll = () => {
   const scrollHeight = window.pageYOffset;
   const navHeight = navbar.getBoundingClientRect().height;
   const heroHeight = hero.getBoundingClientRect().height;
-  setInterval(moveImages, 1000);
+
   if (scrollHeight > navHeight) {
     navbar.classList.add('fixed-nav');
   } else {
@@ -145,26 +144,6 @@ items.forEach((item) => {
   updateCount(item);
 });
 
-// photoGallery
-
-// display all items when page loads
-window.addEventListener("DOMContentLoaded", () => {
-  diplayImageItems(galleryImages);
-});
-//* To display projects
-
-const diplayImageItems = imageItems => {
-  let displayImages = imageItems.map(image => {
-    return `<picture>
-          <img class="galleryImage" src=${image.src}>
-        </picture>`;
-  });
-
-  displayImages = displayImages.join("");
-
-  imagesEnvelop.innerHTML = displayImages;
-}
-
 // photo modal
 
 imagesEnvelop.onclick = (e) => {
@@ -180,8 +159,3 @@ imagesEnvelop.onclick = (e) => {
 galleryWrapper.onclick = (e) => {
   e.currentTarget.classList.remove('show');
 }
-
-// explore
-
-const accessKey = 'OQIrrQHdFrElNRGYAlEiF9cUD68rO6vcO9D7lX0f1Bs';
-const secretKey = '5arQCJhEkW_GSViQ2cPxj6ta9CQX9i0wmpSIJ5N8WRI';
